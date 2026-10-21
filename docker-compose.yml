@@ -1,0 +1,11 @@
+# network_mode: host -> los contenedores comparten la red del equipo anfitrión.
+# Así Wireshark y el servidor ven las mismas MAC, y Flask puede leer la tabla ARP
+# real del equipo para mostrar la MAC de cada alumno (si está en tu misma LAN).
+services:
+  web:
+    build: ./web
+    network_mode: host      # HTTP en texto plano, puerto 8080
+  proxy:
+    build: ./proxy
+    network_mode: host      # HTTPS (nginx con certificado autofirmado), puerto 8443
+    depends_on: [web]
