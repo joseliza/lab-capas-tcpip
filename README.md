@@ -15,7 +15,7 @@ Necesitas Git y Docker con el plugin Compose. Wireshark es opcional pero es el o
 
 Primero, descarga el repositorio (en Windows, dentro de la terminal de Ubuntu/WSL si sigues la opción A):
 
-    git clone https://github.com/USUARIO/lab-capas-tcpip.git
+    git clone https://github.com/joseliza/lab-capas-tcpip.git
     cd lab-capas-tcpip
 
 > **Por qué importa el sistema operativo:** los contenedores usan `network_mode: host`
